@@ -33,6 +33,4 @@ export class DndDirective {
       this.filesChangeEmitter.emit(files);
     }
   }
-
-
 }
