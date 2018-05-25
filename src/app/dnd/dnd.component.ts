@@ -20,5 +20,4 @@ export class DndComponent implements OnInit {
   ngOnInit() {
 
   }
-
 }
