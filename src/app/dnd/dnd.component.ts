@@ -18,12 +18,9 @@ export class DndComponent {
     this.isOpen = !this.isOpen;
   }
 
-  // constructor() { }
-
   onFilesChange(file: FileList) {
     this.newMethod(file);
   }
-
 
   private newMethod(file: FileList) {
     this.fileList = file;
