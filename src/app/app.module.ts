@@ -8,13 +8,17 @@ import { FileUploadModule } from 'angular-file-uploader';
 import { FileDropModule } from 'ngx-file-drop';
 import { DndComponent } from './dnd/dnd.component';
 import { DndDirective } from './dnd/dnd.directive';
+import { UploadComponent } from './upload/upload.component';
+import { PictureComponent } from './picture/picture.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     DndComponent,
-    DndDirective
+    DndDirective,
+    UploadComponent,
+    PictureComponent
   ],
   imports: [
     BrowserModule,
