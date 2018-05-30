@@ -33,3 +33,8 @@
     padding-bottom: 5px;
     padding-left: 10px;
   }
+
+  .upload-button {
+    padding: 70px 0;
+    text-align: center;
+  }

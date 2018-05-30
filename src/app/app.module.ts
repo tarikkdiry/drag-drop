@@ -10,7 +10,7 @@ import { DndComponent } from './dnd/dnd.component';
 import { DndDirective } from './dnd/dnd.directive';
 import { UploadComponent } from './upload/upload.component';
 import { PictureComponent } from './picture/picture.component';
-
+import { ImageUploadModule } from 'angular2-image-upload';
 
 @NgModule({
   declarations: [
@@ -18,13 +18,14 @@ import { PictureComponent } from './picture/picture.component';
     DndComponent,
     DndDirective,
     UploadComponent,
-    PictureComponent
+    PictureComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    FileDropModule
+    FileDropModule,
+    ImageUploadModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

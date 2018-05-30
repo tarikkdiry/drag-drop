@@ -1,8 +1,18 @@
+<div class="upload-button">
+    <button type="button" class="btn btn-primary">Upload</button>
+</div>
+
   <div class="dropzone" appDnd (filesChangeEmitter)="onSelectFile($event)">
     <div class="text-wrapper">
       <div class="centered">Drag and drop here!</div>
     </div>
   </div>
+
+  <!-- <ng4-files-drop (filesSelect)="filesSelect($event)">
+      <div style="display: inline-block; height: 100px; width: 100px; background-color: gray">
+        {{selectedFiles}}
+      </div>
+  </ng4-files-drop> -->
 
   <!-- <div class="dropzone-list">
     <ul>
@@ -12,5 +22,5 @@
     </ul>
   </div> -->
 
-<img [src]="url" height="200"> <br/>
-<input type='file' (change)="onSelectFile($event)">
+<!-- <img [src]="url" height="200"> <br/>
+<input type='file' (change)="onSelectFile($event)"> -->
