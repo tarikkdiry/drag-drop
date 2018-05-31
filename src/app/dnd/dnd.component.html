@@ -1,12 +1,21 @@
-<div class="upload-button">
-    <button type="button" class="btn btn-primary">Upload</button>
-</div>
+<ng-container *ngIf="open">
+  <div class="upload-button">
+      <button type="button" (click)="toggle()" class="btn btn-primary">{{buttonName}}</button>
+  </div>
+</ng-container>
 
+<ng-container *ngIf="show">
   <div class="dropzone" appDnd (filesChangeEmitter)="onSelectFile($event)">
     <div class="text-wrapper">
       <div class="centered">Drag and drop here!</div>
     </div>
   </div>
+</ng-container>
+
+<ng-container *ngIf="show">
+  <image-upload url="https://httpbin.org/status/200"></image-upload>
+</ng-container>
+
 
   <!-- <ng4-files-drop (filesSelect)="filesSelect($event)">
       <div style="display: inline-block; height: 100px; width: 100px; background-color: gray">

@@ -9,8 +9,9 @@ import * as FileSaver from 'file-saver';
 
 export class DndComponent {
   url: any;
-  @HostBinding('class.is-open')
-  isOpen = false;
+  public show = false;
+  public open = true;
+  public buttonName: any = 'Upload';
   private fileList: any = []; // initialize array of file names
 
   // public selectedFiles;
@@ -27,7 +28,18 @@ export class DndComponent {
   // }
 
   toggle() {
-    this.isOpen = !this.isOpen;
+    this.show = !this.show;
+
+    if (this.show) {
+      this.buttonName = '';
+    } else {
+      this.buttonName = 'Upload';
+    }
+
+    if (this.open) {
+      this.open = false;
+    }
+
   }
 
   onFilesChange(file: FileList) {
