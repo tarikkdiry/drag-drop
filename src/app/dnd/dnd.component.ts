@@ -38,6 +38,7 @@ export class DndComponent {
     this.fileList.push(file);
   }
 
+
   // onSelectFile(event) { // called each time file input changes
   //   if (event.target.files && event.target.files[0]) {
   //     // tslint:disable-next-line:prefer-const
