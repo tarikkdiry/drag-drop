@@ -13,20 +13,6 @@ export class PictureComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
-
-  toggle() {
-    this.show = !this.show;
-
-    if (this.show) {
-      this.buttonName = '';
-    } else {
-      this.buttonName = 'Upload';
-    }
-
-    if (this.open) {
-      this.open = false;
-    }
 
   }
 }

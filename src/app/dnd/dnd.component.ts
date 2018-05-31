@@ -14,19 +14,6 @@ export class DndComponent {
   public buttonName: any = 'Upload';
   private fileList: any = []; // initialize array of file names
 
-  // public selectedFiles;
-
-  // public filesSelect(selectedFiles: Ng4FilesSelected): void {
-  //   if (selectedFiles.status !== Ng4FilesStatus.STATUS_SUCCESS) {
-  //     this.selectedFiles = selectedFiles.status;
-  //     return;
-
-  //     // Handle error statuses here
-  //   }
-
-  //   this.selectedFiles = Array.from(selectedFiles.files).map(file => file.name);
-  // }
-
   toggle() {
     this.show = !this.show;
 
@@ -66,5 +53,17 @@ export class DndComponent {
   // }
   // ngOnInit() {
 
+  // }
+  // public selectedFiles;
+
+  // public filesSelect(selectedFiles: Ng4FilesSelected): void {
+  //   if (selectedFiles.status !== Ng4FilesStatus.STATUS_SUCCESS) {
+  //     this.selectedFiles = selectedFiles.status;
+  //     return;
+
+  //     // Handle error statuses here
+  //   }
+
+  //   this.selectedFiles = Array.from(selectedFiles.files).map(file => file.name);
   // }
 }
