@@ -12,19 +12,22 @@ export class DndComponent {
   public show = false;
   public open = true;
   public buttonName: any = 'Upload';
+  public back = false;
   private fileList: any = []; // initialize array of file names
 
   toggle() {
     this.show = !this.show;
 
     if (this.show) {
-      this.buttonName = '';
+      this.buttonName = 'Back';
     } else {
       this.buttonName = 'Upload';
     }
 
     if (this.open) {
       this.open = false;
+      this.back = true;
+      this.buttonName = 'Back';
     }
 
   }
