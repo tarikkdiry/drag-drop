@@ -1,13 +1,13 @@
 <ng-container *ngIf="open">
   <div class="upload-button">
-      <button type="button" (click)="toggle()" class="btn btn-primary">{{buttonName}}</button>
+      <button type="button" (click)="toggle()" class="btn btn-primary">{{ buttonName }}</button>
   </div>
 </ng-container>
 
 <ng-container *ngIf="show">
   <div class="dropzone" appDnd (filesChangeEmitter)="onSelectFile($event)">
     <div class="text-wrapper">
-      <div class="centered">Drag and drop here!</div>
+      <div class="centered">Drop here!</div>
     </div>
   </div>
 </ng-container>
@@ -18,25 +18,6 @@
 
 <ng-container *ngIf="back">
   <div class="upload-button">
-      <button type="button" (click)="toggle()" class="btn btn-primary">{{buttonName}}</button>
+      <button type="button" (click)="toggle()" class="btn btn-primary">{{ buttonName }}</button>
   </div>
 </ng-container>
-
-
-
-  <!-- <ng4-files-drop (filesSelect)="filesSelect($event)">
-      <div style="display: inline-block; height: 100px; width: 100px; background-color: gray">
-        {{selectedFiles}}
-      </div>
-  </ng4-files-drop> -->
-
-  <!-- <div class="dropzone-list">
-    <ul>
-      <li *ngFor="let file of fileList">
-        {{ file.name }}
-      </li>
-    </ul>
-  </div> -->
-
-<!-- <img [src]="url" height="200"> <br/>
-<input type='file' (change)="onSelectFile($event)"> -->

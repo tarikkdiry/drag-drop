@@ -40,34 +40,4 @@ export class DndComponent {
     this.fileList = file;
     this.fileList.push(file);
   }
-
-
-  // onSelectFile(event) { // called each time file input changes
-  //   if (event.target.files && event.target.files[0]) {
-  //     // tslint:disable-next-line:prefer-const
-  //     let reader = new FileReader();
-
-  //     reader.readAsDataURL(event.target.files[0]); // read file as data url
-
-  //     // tslint:disable-next-line:no-shadowed-variable
-  //     reader.onload = (event) => { // called once readAsDataURL is completed
-  //       this.url = event.target.result;
-  //     };
-  //   }
-  // }
-  // ngOnInit() {
-
-  // }
-  // public selectedFiles;
-
-  // public filesSelect(selectedFiles: Ng4FilesSelected): void {
-  //   if (selectedFiles.status !== Ng4FilesStatus.STATUS_SUCCESS) {
-  //     this.selectedFiles = selectedFiles.status;
-  //     return;
-
-  //     // Handle error statuses here
-  //   }
-
-  //   this.selectedFiles = Array.from(selectedFiles.files).map(file => file.name);
-  // }
 }
