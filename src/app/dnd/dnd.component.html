@@ -4,13 +4,13 @@
   </div>
 </ng-container>
 
-<ng-container *ngIf="show">
+<!-- <ng-container *ngIf="show">
   <div class="dropzone" appDnd (filesChangeEmitter)="onSelectFile($event)">
     <div class="text-wrapper">
       <div class="centered">Drop here!</div>
     </div>
   </div>
-</ng-container>
+</ng-container> -->
 
 <ng-container *ngIf="show">
   <image-upload url="https://httpbin.org/status/200"></image-upload>

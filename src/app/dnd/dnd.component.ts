@@ -29,7 +29,6 @@ export class DndComponent {
       this.back = true;
       this.buttonName = 'Back';
     }
-
   }
 
   onFilesChange(file: FileList) {
