@@ -8,17 +8,19 @@ import { FileUploadModule } from 'angular-file-uploader';
 import { FileDropModule } from 'ngx-file-drop';
 import { DndComponent } from './dnd/dnd.component';
 import { DndDirective } from './dnd/dnd.directive';
-import { UploadComponent } from './upload/upload.component';
+// import { UploadComponent } from './upload/upload.component';
 import { PictureComponent } from './picture/picture.component';
 import { ImageUploadModule } from 'angular2-image-upload';
+import { UploadFormComponent } from './upload-form/upload-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DndComponent,
     DndDirective,
-    UploadComponent,
+    // UploadComponent,
     PictureComponent,
+    UploadFormComponent,
   ],
   imports: [
     BrowserModule,

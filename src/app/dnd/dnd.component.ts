@@ -12,7 +12,8 @@ export class DndComponent {
   public show = false;
   public open = true;
   public buttonName: any = 'Upload';
-  public back = false;
+  public back = true;
+  public upload = false;
   private fileList: any = []; // initialize array of file names
 
   toggle() {
@@ -25,9 +26,20 @@ export class DndComponent {
     }
 
     if (this.open) {
-      this.open = false;
+      this.open = !this.open;
       this.back = true;
       this.buttonName = 'Back';
+    } else {
+      this.back = false;
+      this.open = true;
+    }
+  }
+
+  formToggle(upload) {
+    if (upload === true) {
+      this.upload = true;
+    } else {
+      this.upload = false;
     }
   }
 
@@ -39,4 +51,12 @@ export class DndComponent {
     this.fileList = file;
     this.fileList.push(file);
   }
+
+  // tslint:disable-next-line:member-ordering
+  customStyle = {
+    selectButton: {
+      'color': 'white',
+      'background-color': 'purple',
+    }
+  };
 }

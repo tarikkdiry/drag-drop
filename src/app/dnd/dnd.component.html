@@ -13,11 +13,26 @@
 </ng-container> -->
 
 <ng-container *ngIf="show">
-  <image-upload url="https://httpbin.org/status/200"></image-upload>
+  <div class="dropzone" appDnd (filesChangeEmitter)="formToggle(true)"  >
+    <image-upload url="https://httpbin.org/status/200"
+      [max]="100"
+      [buttonCaption] = "'Upload'"
+      [class]="'customClass'"
+      [dropBoxMessage]="'Drop here!'"
+      [style]="'customStyle'">
+    </image-upload>
+  </div>
+  <br>
+  <ng-container *ngIf="upload">
+    <app-upload-form></app-upload-form>
+  </ng-container>
+  <ng-container *ngIf="back">
+      <div class="upload-button">
+          <button type="button" (click)="toggle()" class="btn btn-primary">{{ buttonName }}</button>
+      </div>
+    </ng-container>
+    
 </ng-container>
 
-<ng-container *ngIf="back">
-  <div class="upload-button">
-      <button type="button" (click)="toggle()" class="btn btn-primary">{{ buttonName }}</button>
-  </div>
-</ng-container>
+
+

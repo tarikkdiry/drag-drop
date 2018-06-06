@@ -5,7 +5,6 @@
     display: table;
     width: 100%;
     background-color: #eee;
-    border: dotted 1px #aaa;
   }
   
   .text-wrapper {
@@ -13,14 +12,9 @@
     vertical-align: middle;
   }
   
-  .centered {
-    font-family: sans-serif;
-    font-size: 1.3em;
-    font-weight: bold;
-    text-align:center;
-  }
+ 
 
-  .dropzone-list > ul {
+  /* .dropzone-list > ul {
     width: 30%;
     list-style: none;
   }
@@ -32,10 +26,12 @@
     border: 1px solid black;
     padding-bottom: 5px;
     padding-left: 10px;
-  }
+  } */
 
   .upload-button {
     padding: 70px 0;
     text-align: center;
     margin-top: 15%;
   }
+
+
