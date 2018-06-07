@@ -1,3 +1,4 @@
+<!-- OPENING SCREEN -->
 <ng-container *ngIf="open">
   <div class="upload-button">
       <button type="button" (click)="toggle()" class="btn btn-primary">{{ buttonName }}</button>
@@ -12,27 +13,30 @@
   </div>
 </ng-container> -->
 
+<!-- UPLOAD FIELD + CAPTION FIELD-->
 <ng-container *ngIf="show">
-  <div class="dropzone" appDnd (filesChangeEmitter)="formToggle(true)"  >
+  <div class="dropzone" appDnd (filesChangeEmitter)="formToggle(true)">
     <image-upload url="https://httpbin.org/status/200"
       [max]="100"
       [buttonCaption] = "'Upload'"
       [class]="'customClass'"
       [dropBoxMessage]="'Drop here!'"
-      [style]="'customStyle'">
+      [style]="'customStyle'"
+      (removed)="onRemoved($event)"
+      (uploadFinished)="onUploadFinished($event)">
     </image-upload>
   </div>
   <br>
-  <ng-container *ngIf="upload">
+  <ng-container *ngIf="inputCaption">
     <app-upload-form></app-upload-form>
   </ng-container>
   <ng-container *ngIf="back">
       <div class="upload-button">
           <button type="button" (click)="toggle()" class="btn btn-primary">{{ buttonName }}</button>
       </div>
-    </ng-container>
-    
+  </ng-container>
 </ng-container>
+
 
 
 
