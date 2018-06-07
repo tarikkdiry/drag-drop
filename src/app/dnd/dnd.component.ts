@@ -19,6 +19,9 @@ export class DndComponent {
 
   caption = '';
 
+  /*
+    Triggered when buttons are pressed, responsible for changing the button titles
+  */
   toggle() {
     this.show = !this.show;
     this.inputCaption = false;
@@ -46,31 +49,27 @@ export class DndComponent {
     }
   }
 
-  formToggle(upload) {
-    if (upload === true) {
-      this.upload = true;
-    } else {
-      this.upload = false;
-    }
-  }
 
-  onFilesChange(file: FileList) {
-    this.newMethod(file);
-  }
-
-  newMethod(file: FileList) {
-    this.fileList = file;
-    this.fileList.push(file);
-  }
-
+  /*
+    Opens the caption component
+    @param: Event
+  */
   onUploadFinished($event) {
     this.inputCaption = true;
   }
 
+  /*
+    Removes the caption component
+    @param: Event
+  */
   onRemoved($event) {
     this.inputCaption = false;
   }
 
+  /*
+    Pushes input caption
+    @param: Event
+  */
   addCaption(event: any) {
     this.caption += event.target.value + ' | ';
     alert(this.caption);
