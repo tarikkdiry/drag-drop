@@ -35,7 +35,7 @@ export class DndComponent {
 
   /*
     Opens the caption component
-    @param: Event
+    @param: $event
   */
   onUploadFinished($event) {
     this.showCaptionField = true;
@@ -44,7 +44,7 @@ export class DndComponent {
 
   /*
     Removes the caption component
-    @param: Event
+    @param: $event
   */
   onRemoved($event) {
     this.showCaptionField = false;
