@@ -16,10 +16,12 @@
 <!-- UPLOAD FIELD + CAPTION FIELD-->
 <ng-container *ngIf="show">
   <div class="dropzone" appDnd (filesChangeEmitter)="formToggle(true)">
-    <image-upload url="https://httpbin.org/status/200"
+    <image-upload 
       [max]="100"
       [buttonCaption] = "'Upload'"
-      [class]="'customClass'"
+      [class]="'upload'"
+      [maxFileSize]="1048576"
+      [extensions]="['jpg','png','gif']"
       [dropBoxMessage]="'Drop here!'"
       [style]="'customStyle'"
       (removed)="onRemoved($event)"
@@ -27,7 +29,7 @@
     </image-upload>
   </div>
   <br>
-  <ng-container *ngIf="inputCaption">
+  <ng-container *ngIf="showCaptionField">
     <app-upload-form></app-upload-form>
   </ng-container>
   <ng-container *ngIf="back">
