@@ -1,9 +1,9 @@
 <!-- OPENING SCREEN -->
-<ng-container *ngIf="open">
+<!-- <ng-container *ngIf="open">
   <div class="upload-button">
       <button type="button" (click)="toggle()" class="btn btn-primary">{{ buttonName }}</button>
   </div>
-</ng-container>
+</ng-container> -->
 
 <!-- <ng-container *ngIf="show">
   <div class="dropzone" appDnd (filesChangeEmitter)="onSelectFile($event)">
@@ -14,7 +14,7 @@
 </ng-container> -->
 
 <!-- UPLOAD FIELD + CAPTION FIELD-->
-<ng-container *ngIf="show">
+<ng-container>
   <div class="dropzone" appDnd (filesChangeEmitter)="formToggle(true)">
     <image-upload 
       [max]="100"
@@ -32,11 +32,11 @@
   <ng-container *ngIf="showCaptionField">
     <app-upload-form></app-upload-form>
   </ng-container>
-  <ng-container *ngIf="back">
+  <!-- <ng-container *ngIf="back">
       <div class="upload-button">
           <button type="button" (click)="toggle()" class="btn btn-primary">{{ buttonName }}</button>
       </div>
-  </ng-container>
+  </ng-container> -->
 </ng-container>
 
 
