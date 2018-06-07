@@ -15,7 +15,7 @@ export class DndComponent {
   public back = true; // back button
   public upload = false; // upload boolean
   private fileList: any = []; // initialize array of file names
-  private inputCaption = false; // caption field boolean
+  private showCaptionField = true; // caption field boolean
   public imageCount = 0; // Counts the amount of images being uploaded
 
   caption = '';
@@ -25,7 +25,7 @@ export class DndComponent {
   */
   toggle() {
     this.show = !this.show;
-    this.inputCaption = false;
+    this.showCaptionField = false;
 
     if (this.show) {
       this.buttonName = 'Back';
@@ -55,7 +55,7 @@ export class DndComponent {
     @param: Event
   */
   onUploadFinished($event) {
-    this.inputCaption = true;
+    this.showCaptionField = true;
     this.imageCount++;
   }
 
@@ -64,12 +64,12 @@ export class DndComponent {
     @param: Event
   */
   onRemoved($event) {
-    this.inputCaption = false;
+    this.showCaptionField = false;
     this.imageCount--;
 
     // Ensures the caption component is hidden if there are no uploaded posts in preview
     if (this.imageCount > 0) {
-      this.inputCaption = true;
+      this.showCaptionField = true;
     }
   }
 
