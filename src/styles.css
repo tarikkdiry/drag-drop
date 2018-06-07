@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-.customClass {
+.upload {
     background-color: #eee;
     border-radius: 5px;
     margin:5px;
@@ -8,19 +8,20 @@
     border: dotted 3px #aaa;
 }
 
-.customClass .img-ul-upload {
-    background-color:	#428bca;
+.upload .img-ul-upload {
+    background-color:	#428bca !important;
 }
 
-.customClass .img-ul-clear {
-    background-color: rgb(24, 6, 6);
+.upload .img-ul-clear {
+    background-color: rgb(255, 0, 0) !important;
 }
 
-.customClass .img-ul-drag-box-msg {
-    color:	#428bca;
+.upload .img-ul-drag-box-msg {
+    color:	#428bca !important;
 }
 
-.customClass .img-ul-container {
-    background-color: 	#428bca;
+.upload .img-ul-container {
+    background-color: 	white !important;
+    width: 50%;
 }
 

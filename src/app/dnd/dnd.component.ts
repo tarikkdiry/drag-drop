@@ -16,6 +16,7 @@ export class DndComponent {
   public upload = false; // upload boolean
   private fileList: any = []; // initialize array of file names
   private inputCaption = false; // caption field boolean
+  public imageCount = 0; // Counts the amount of images being uploaded
 
   caption = '';
 
@@ -49,13 +50,13 @@ export class DndComponent {
     }
   }
 
-
   /*
     Opens the caption component
     @param: Event
   */
   onUploadFinished($event) {
     this.inputCaption = true;
+    this.imageCount++;
   }
 
   /*
@@ -64,6 +65,12 @@ export class DndComponent {
   */
   onRemoved($event) {
     this.inputCaption = false;
+    this.imageCount--;
+
+    // Ensures the caption component is hidden if there are no uploaded posts in preview
+    if (this.imageCount > 0) {
+      this.inputCaption = true;
+    }
   }
 
   /*
@@ -75,11 +82,27 @@ export class DndComponent {
     alert(this.caption);
   }
 
+  addText(title: string) {
+    console.log(title);
+  }
+
   // tslint:disable-next-line:member-ordering
   customStyle = {
     selectButton: {
-      'color': 'blue',
+      'color': 'white',
       'background-color': 'purple',
+    },
+    clearButton: {
+      'color': 'white',
+      'background-color': 'yellow',
+    },
+    layout: {
+      'background-color': 'black',
+      'color': 'red',
+      'font-size': '15px',
+    },
+    previewPanel: {
+      'background-color': 'red',
     }
   };
 }
