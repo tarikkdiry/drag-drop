@@ -1,6 +1,6 @@
 <!-- UPLOAD FIELD + CAPTION FIELD-->
 <ng-container>
-  <div class="dropzone" appDnd (filesChangeEmitter)="formToggle(true)">
+  <div class="dropzone" appDnd (filesChangeEmitter)="formToggle(true)" #coverFilesInput (change)="onChange($event)" class="file-input"  >
     <image-upload 
       [max]="100"
       [buttonCaption] = "'Upload'"

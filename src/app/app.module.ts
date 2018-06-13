@@ -12,6 +12,7 @@ import { DndDirective } from './dnd/dnd.directive';
 import { PictureComponent } from './picture/picture.component';
 import { ImageUploadModule } from 'angular2-image-upload';
 import { UploadFormComponent } from './upload-form/upload-form.component';
+import { ImageSizeComponent } from './image-size/image-size.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { UploadFormComponent } from './upload-form/upload-form.component';
     // UploadComponent,
     PictureComponent,
     UploadFormComponent,
+    ImageSizeComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,7 @@
+<input type="file" #coverFilesInput (change)="onChange($event)" class="file-input"  />
+
+    <ng-container *ngIf="uploadSuccess">
+      The image height is: {{height}}px <br>
+      The image width is: {{width}}px <br>
+      <strong>This image is a {{ imageType }} image</strong> <br>
+    </ng-container> 

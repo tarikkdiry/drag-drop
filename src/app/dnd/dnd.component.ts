@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener, HostBinding } from '@angular/core';
+import { Component, OnInit, HostListener, HostBinding, VERSION, ViewChild, ElementRef } from '@angular/core';
 import * as FileSaver from 'file-saver';
 
 @Component({
@@ -18,6 +18,10 @@ export class DndComponent {
   public imageCount = 0; // Counts the amount of images being uploaded
 
   caption = '';
+
+  @ViewChild('coverFilesInput') imgType: ElementRef;
+
+  constructor() { }
 
   /*
     Triggered when buttons are pressed, responsible for changing the button titles
@@ -40,6 +44,11 @@ export class DndComponent {
   onUploadFinished($event) {
     this.showCaptionField = true;
     this.imageCount++;
+    const img = new Image();
+    img.addEventListener('load', function() {
+      alert(this.naturalWidth + ' ' + this.naturalHeight);
+    });
+    img.src = this.url;
   }
 
   /*
@@ -68,4 +77,5 @@ export class DndComponent {
   addText(title: string) {
     console.log(title);
   }
+
 }
