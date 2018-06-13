@@ -18,6 +18,7 @@ export class ImageSizeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
   onChange(evt: any) {
