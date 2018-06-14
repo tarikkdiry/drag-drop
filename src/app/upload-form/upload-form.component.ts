@@ -12,3 +12,5 @@ export class UploadFormComponent {
   onSubmit() { this.submitted = true; }
 
 }
+
+
