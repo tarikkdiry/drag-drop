@@ -6,6 +6,7 @@ import { HttpClientModule, HttpClient, HttpRequest, HttpResponse, HttpEventType}
   templateUrl: './image-size.component.html',
   styleUrls: ['./image-size.component.css']
 })
+
 export class ImageSizeComponent implements OnInit {
   percentDone: number;
   uploadSuccess: boolean;

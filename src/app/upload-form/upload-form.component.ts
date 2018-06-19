@@ -9,7 +9,9 @@ export class UploadFormComponent {
   submitted = false;
   constructor() { }
 
-  onSubmit() { this.submitted = true; }
+  onSubmit() {
+    this.submitted = true;
+  }
 
 }
 
